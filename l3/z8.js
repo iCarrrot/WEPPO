@@ -27,25 +27,26 @@ function* take(it, top) {
     var i = 0;
     while (i < top) {
         i += 1;
-        yield * [it.next().value];
+        yield it.next().value;
     }
 }
 
-var _it = fib();
-var __i = 0;
-for (var _result; _result = _it.next(), !_result.done;) {
-    console.log(_result.value);
-    __i += 1;
-    if (__i > 10)
-        break;
-}
+// var _it = fib();
+// var __i = 0;
+// for (var _result; _result = _it.next(), !_result.done;) {
+//     console.log(_result.value);
+//     __i += 1;
+//     if (__i > 10)
+//         break;
+// }
 __i = 0
-for (var i of fib1()) {
-    console.log(i);
-    __i += 1;
-    if (__i > 10)
-        break;
-}
+
+// for (var i of fib1()) {
+//     console.log(i);
+//     __i += 1;
+//     if (__i > 10)
+//         break;
+// }
 
 
 for (let num of take(fib1(), 20)) {
