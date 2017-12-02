@@ -13,7 +13,6 @@ var util = require('util');
 // });
 
 // console.log('koniec programu!');
-// //NOT FINISHED YET!
 
 function fspromise(path) {
     return new Promise(function (res, rej) {
