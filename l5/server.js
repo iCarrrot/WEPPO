@@ -2,6 +2,14 @@ var http = require('http');
 var express = require('express');
 var url = require('url')
 var utils = require('./utils.js');
+var https = require('https');
+var fs = require('fs');
+
+const options = {
+    pfx: fs.readFileSync('/home/michal/WEPPO/l5/iCarrot.pfx'),
+    passphrase: ''
+  };
+  
 
 var app = express();
 
@@ -91,5 +99,5 @@ app.use((req, res, next) => {
 
 // tu uruchamiamy serwer
 var server = http.createServer(app).listen(3000);
-
+var server = https.createServer(options, app).listen(3001);
 console.log('serwer started');
