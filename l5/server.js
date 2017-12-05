@@ -10,10 +10,7 @@ const options = {
     passphrase: ''
   };
   
-
 var app = express();
-
-
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
@@ -65,7 +62,6 @@ app.post('/deklaracja', (req, res) => {
         }
     }
 
-
     var model = { name: name, lecture: lecture, punkty: punkty, date: date };
     // res.render('print', model);
     res.redirect(
@@ -87,9 +83,6 @@ app.get('/print', (req, res) => {
     console.log(punkty)
     res.render('print', model);
 });
-
-
-
 
 app.use((req, res, next) => {
     res.render('404.ejs', { url: req.url });
