@@ -1,0 +1,25 @@
+Changed database context to 'TestDB'.
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+id          name                                               surname                                            sex age        
+----------- -------------------------------------------------- -------------------------------------------------- --- -----------
+          9 Michal                                             Martusewicz                                        K            16
+         10 Micha1                                             Martusewicz                                        K            18
+         17 Michal                                             Martusewicz                                        K            16
+         18 Micha1                                             Martusewicz                                        K            18
+
+(4 rows affected)

@@ -86,9 +86,7 @@ app.get('/print', (req, res) => {
     res.render('print', model);
 });
 
-app.use((req, res, next) => {
-    res.render('404.ejs', { url: req.url });
-});
+
 
 //zadanie 6.1
 app.get('/file', (req, res) => {
@@ -149,7 +147,9 @@ app.get('/sessions', (req, res) => {
 })
 
 
-
+app.use((req, res, next) => {
+    res.render('404.ejs', { url: req.url });
+});
 
 // //https:
 // const options = {
